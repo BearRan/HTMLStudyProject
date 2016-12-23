@@ -32,7 +32,36 @@
 		这是一个链接
 	</a>
 	
+	<!--外部样式表-->
 	 <head>
-	 	<link
+	 	<link rel="stylesheet" type="text/css" href="/html/csstest1/css">
+	 </head>
+	 
+	 <body>
+	 	<h1>我是通过外部样式表格进行格式化。</h1>
+	 	<p>我也一样！</p>
+	 	
+	 </body>
+	 
+	 <!--内部样式表-->
+	 <head>
+	 	<style type="text/css">
+	 		body {background-color: orange}
+	 		p {margin-left: 70px}
+	 	</style>
+	 	
+	 	<body>
+	 		<h1>测试一下内部样式表</h1>
+	 	</body>
+	 	
+	 	<!--内联样式表-->
+	 	<p style="color: gray; margin-left: 40px">
+	 		This is a inline paragraph
+	 	</p>
+	 	
+	 	<p>
+	 		This is a normal paragraph
+	 	</p>
+	 	
 	 </head>
 </html>
