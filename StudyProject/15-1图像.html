@@ -4,6 +4,11 @@
 		<meta charset="UTF-8">
 		<title></title>
 	</head>
+	
+	<!--背景图片-->
+	<h3>图像背景</h3>
+	<p>gif 和 jpg文件均可做HTML背景。</p>
+	<p>如果图像小于页面，图像会进行重复。</p>
 	<body background="Sources/TestBg_1.png">
 	
 	<h5>插入普通图片</h5>
@@ -26,18 +31,66 @@
 	<br/>
 	<h2>未设置对齐方式的图像</h2>
 	<p>图像 
-		<img src="https://camo.githubusercontent.com/a6eec93a26efa4b006ccddafcc132871e6a8a514/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630393038313632333236353330" height="100" align="bottom"/>
+		<img src="Sources/back_icon.png" height="100" align="bottom"/>
 		在文本中
 	</p>
 	<p>图像
-		<img src="https://camo.githubusercontent.com/a6eec93a26efa4b006ccddafcc132871e6a8a514/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630393038313632333236353330" height="100" align="middle"/>
+		<img src="Sources/back_icon.png" height="100" align="middle"/>
 		在文本中
 	</p>
 	<p>图像
-		<img src="https://camo.githubusercontent.com/a6eec93a26efa4b006ccddafcc132871e6a8a514/687474703a2f2f696d672e626c6f672e6373646e2e6e65742f3230313630393038313632333236353330" height="100" align="top"/>
+		<img src="Sources/back_icon.png" height="100" align="top"/>
 		在文本中
 	</p>
 	<p>
 		请注意，bottom对齐方式是默认的对齐方式。
 	</p>
+	
+	<br/>
+	<br/>
+	<h2>浮动图像</h2>
+	<p>
+		<img src="Sources/back_icon.png" align="left">
+		带有图像的一个段落，图像的align属性设置为"left"。图像将浮动到文本左侧
+	</p>
+	<p>
+		<img src="Sources/back_icon.png" align="right">
+		带有图像的一个段落。图像的align属性设置为"right"。图像将浮动到文本右侧
+	</p>
+	
+	<br/>
+	<br/>
+	<h2>调整图像显示尺寸</h2>
+	<img src="Sources/back_icon.png" width="50" height="50">
+	<br/>
+	<img src="Sources/back_icon.png" width="100" height="100">
+	<br/>
+	<img src="Sources/back_icon.png" width="200" height="200">
+	<br/>
+	<p>通过改变img标签的"height"和"width"属性的值，您可以放大或缩小图像</p>
+	
+	<br/>
+	<br/>
+	<p>
+		您也可以把图像作为链接来使用
+		<a href="http://www.baidu.com" target="_blank">
+			<img border="0" src="Sources/back_icon.png">
+		</a>
+	</p>
+	
+	<!--localStorage测试-->
+	<script type="text/javascript">
+		if(window.localStorage){
+			alert("浏览器支持localStorage");
+		}else{
+			alert("浏览器不支持localStorage");
+		}
+		
+		if (localStorage.requestcout) {
+            localStorage.requestcout = Number(localStorage.requestcout)+1;
+        }else {
+            localStorage.requestcout = 1;
+        }
+        document.write("（这里是刷新就算一次访问页面）本网页的访问量是："+localStorage.requestcout+"次");
+	</script>
 </html>
