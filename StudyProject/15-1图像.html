@@ -74,12 +74,42 @@
 	<p>
 		您也可以把图像作为链接来使用
 		<a href="http://www.baidu.com" target="_blank">
+			<br/>
 			<img border="0" src="Sources/back_icon.png">
+			<h1>Click</h1>
 		</a>
 	</p>
 	
+	<p>请点击图像上的星球，把它们放大</p>
+	<img src="Sources/eg_planets.jpg" border="10" usemap="#planetMap" alt="Planets">
+	<map name="planetMap" id="planetMap">
+		<area
+			shape="circle"
+			coords="180,139,14"
+			href="http://www.baidu.com"
+			target="_blank"
+			alt="Venus">
+		
+		<area
+			shape="circle"
+			coords="129,161,10"
+			href="http://www.taobao.com"
+			target="_blank"
+			alt="Mercurty"
+			>
+			
+		<area
+			shape="rect"
+			coords="0,0,110,260"
+			href="http://www.tudou.com"
+			target="_blank"
+			alt="Sun"
+			>
+		
+	</map>
+	
 	<!--localStorage测试-->
-	<script type="text/javascript">
+	<!--<script type="text/javascript">
 		if(window.localStorage){
 			alert("浏览器支持localStorage");
 		}else{
@@ -92,5 +122,5 @@
             localStorage.requestcout = 1;
         }
         document.write("（这里是刷新就算一次访问页面）本网页的访问量是："+localStorage.requestcout+"次");
-	</script>
+	</script>-->
 </html>
