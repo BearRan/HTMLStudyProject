@@ -1,0 +1,17 @@
+h1 {color: orange; font-size: 19px;}
+h1 {color: blue; font-family: "agency fb";}
+p {
+	text-align: center;
+	color: black;
+	font-family: arial;
+	}
+body{
+	color: yellow;
+	background: green;
+	margin: 0;
+	padding: 0;
+	font-family: georgia;
+}
+h1,h2,h3{
+	color: yellow;
+}
