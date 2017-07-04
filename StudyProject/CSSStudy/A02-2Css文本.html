@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			p.pTest1 {text-indent: -5em; padding-left: 5em;}
+			
+			/*使用百分比值*/
+			div.divTest0 {width: 500px; background-color: orange;}
+			p.pTest2 {text-indent: 20%;}
+			
+			/*继承*/
+			div.divTest1 #outer {width: 500px;}
+			div.divTest1 #inner1 {text-indent: 10%; background-color: burlywood;}
+			p.ptest3 {width: 320px; background-color: blueviolet;}
+			
+			/*字间隔（单词间隔）*/
+			p.spread {word-spacing: 30px;}
+			p.tight {word-spacing: -0.5em;}
+			
+			/*字母间隔*/
+			h1.h1Test1 {letter-spacing: -0.5em;}
+			h4.h4Test1 {letter-spacing: 20px;}
+			
+			/*字符转换*/
+			h1.uppercrase {text-transform: uppercase;}
+			p.uppercrase {text-transform: uppercase;}
+			p.lowercrase {text-transform: lowercase;}
+			p.capitalize {text-transform: capitalize;}
+			
+			/*处理空白符*/
+			p.pTest4 {white-space: normal;}
+		</style>
+	</head>
+	<body>
+		<p class="pTest1">文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试文本测试</p>
+		
+		<!--使用百分比值-->
+		<div class="divTest0">
+			<p class="pTest2">this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.</p>
+		</div>
+		
+		<!--继承-->
+		<div id="outer" class="divTest1">
+			<div id="inner1" class="divTest1">
+				some text.some text.some text.some text.some text.some text.some text.some text.some text.some text.some text.
+				<p class="ptest3">this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.this is a paragraph.</p>
+			</div>
+		</div>
+		
+		<!--字间隔（单词间隔）-->
+		<p class="spread">This is some Text. This is some Text.</p>
+		<p class="tight">This is some text. This is some text.</p>
+		
+		<!--字母间隔-->
+		<h1 class="h1Test1">This is header 1</h1>
+		<h4 class="h4Test1">This is header 4</h4>
+		
+		<!--字符转换-->
+		<h1 class="uppercrase">This is an H1 Element</h1>
+		<p class="uppercrase">This is some text in a paragraph.</p>
+		<p class="lowercrase">This is some text in a paragraph.</p>
+		<p class="capitalize">This is some text in a paragraph.</p>
+		
+		<!--处理空白符-->
+		<p class="pTest4">This     paragraph has    many
+   			 spaces           in it.</p>
+
+		<p>注释：当 white-space 属性设置为 normal 时，会合并所有的空白符，并忽略换行符。</p>
+	</body>
+</html>
