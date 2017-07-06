@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			h1.style1 {font-family: georgia;}
+			h1.style2 {font-family: georgia, serif;}
+			
+			p.style1 {font-family: times, "times new roman", New Century Schoolbook, georgia, serif; background-color: orange;}
+			p.normal {font-style: normal;}
+			p.italic {font-style: italic;}
+			p.oblique {font-style: oblique;}
+			
+			/*小型大写字母*/
+			p.normal1 {font-variant: normal;}
+			p.small {font-variant: small-caps;}
+		</style>
+	</head>
+	<body>
+		<h1 class="style1">This is a heading 1.</h1>
+		<p>This is a paragraph.</p>
+		<p>This is a paragraph.</p>
+		
+		<!--这样的规则同时会产生另外一个问题，如果用户代理上没有安装 Georgia 字体，就只能使用用户代理的默认字体来显示 h1 元素。
+我们可以通过结合特定字体名和通用字体系列来解决这个问题：-->
+		<h1 class="style2">This is a heading 1.</h1>
+		
+		<!--如果您对字体非常熟悉，也可以为给定的元素指定一系列类似的字体。要做到这一点，需要把这些字体按照优先顺序排列，然后用逗号进行连接：-->
+		<p class="style1">This is a paragraph.</p>
+		
+		<!--单引号或双引号都可以接受。但是，如果把一个 font-family 属性放在 HTML 的 style 属性中，则需要使用该属性本身未使用的那种引号-->
+		<p style="font-family: times, 'times new roman', georgia, serif;">This is a paragraph.</p>
+		
+		<p class="normal">This is a paragraph, normal.</p>
+		<p class="italic">This is a paragraph, italic.</p>
+		<p class="oblique">This is a paragraph, oblique.</p>
+		
+		<!--小型大写字母-->
+		<p class="normal1">This is a paragraph.</p>
+		<p class="small">This is a paragraph.</p>
+	</body>
+	<body class="">
+		
+	</body>
+</html>

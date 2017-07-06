@@ -31,6 +31,18 @@
 			
 			/*处理空白符*/
 			p.pTest4 {white-space: normal;}
+			
+			/*值 pre*/
+			p.pre {white-space: pre;}
+			
+			/*值 nowrap*/
+			p.nowrap {white-space: nowrap;}
+			
+			/*pre-wrap*/
+			p.preWrap {white-space: pre-wrap;}
+			
+			/*pre-line*/
+			p.preLine {white-space: pre-line;}
 		</style>
 	</head>
 	<body>
@@ -68,5 +80,31 @@
    			 spaces           in it.</p>
 
 		<p>注释：当 white-space 属性设置为 normal 时，会合并所有的空白符，并忽略换行符。</p>
+		
+		<!--值 pre-->
+		<p class="pre">This      paragraph has    many
+		
+		Spaces   in it.</p>
+		<p>注释：当white-space 的属性为pre时，浏览器不会合并空白符，也不会忽略换行符</p>
+		
+		<!--值 nowrap-->
+		<p class="nowrap">
+			这是一些文本。
+			这是一些文本。
+			这是一些文本。
+			这是一些文本。
+		</p>
+		
+		<!--pre-wrap-->
+		<p class="preWrap">This      paragraph has     a    great
+		many   s  pa c e s    with its   textual  content.</p>
+		
+		<p>注释：当 white-space 属性设置为 pre-wrap 时，浏览器不仅会保留空白符并保留换行符，还允许自动换行。</p>
+		
+		<!--pre-line-->
+		<p class="preLine">This      paragraph has     a    great
+		many   s  pa c e s    with its   textual  content.</p>
+		
+		<p>注释：当 white-space 属性设置为 pre-line 时，浏览器会保留换行符，并允许自动换行，但是会合并空白符，这是与 pre-wrap 值的不同之处。</p>
 	</body>
 </html>
