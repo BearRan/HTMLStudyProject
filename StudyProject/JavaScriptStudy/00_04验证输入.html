@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>我的第一段JavaScript</h1>
+		
+		<input id="demo" type="text">
+		
+		<script>
+			function myFunction()
+			{
+				var x=document.getElementById("demo").value;
+				if(x==""||isNaN(x))
+				{
+					alert("Not Numberic");
+				}else{
+					alert("is number");
+				}
+			}
+		</script>
+		
+		<button type="button" onclick="myFunction()">点击这里，校验输入</button>
+	</body>
+</html>
