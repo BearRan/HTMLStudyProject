@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>实例在window对象中使用 addEventListener() 方法。</p>
+		<p>尝试重置浏览器的窗口触发 "resize" 事件句柄。</p>
+		<p id="demo"></p>
+		<script>
+			window.addEventListener("resize", function(){
+				document.getElementById("demo").innerHTML = Math.random();
+			});
+		</script>
+	</body>
+</html>
