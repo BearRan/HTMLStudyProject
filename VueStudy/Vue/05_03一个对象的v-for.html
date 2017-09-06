@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		
+		<!--你也可以用 v-for 通过一个对象的属性来迭代。-->
+		<div id="demo">
+			<ul>
+				<li v-for="value in object">
+					{{value}}
+				</li>
+			</ul>
+		</div>
+		
+		<div id="demo1">
+			<ul>
+				<li v-for="(value, key) in object">
+					{{key}} : {{value}}
+				</li>
+			</ul>
+		</div>
+		
+		<!--你也可以提供第二个的参数为键名：-->
+		
+		<div id="demo2">
+			<ul>
+				<li v-for="(value, key, index) in object">
+					{{index}}.{{key}} : {{value}}
+				</li>
+			</ul>
+		</div>
+		
+		<!--script-->
+		
+		<script>
+			new Vue({
+				el: '#demo',
+				data: {
+					object: {
+						firstName: 'John',
+						lastName: 'Doe',
+						age: 30,
+					}
+				}
+			})
+		</script>
+		
+		<script>
+			new Vue({
+				el: '#demo1',
+				data: {
+					object: {
+						firstName: 'John',
+						lastName: 'Doe',
+						age: 30,
+					}
+				}
+			})
+		</script>
+		
+		<script>
+			new Vue({
+				el: '#demo2',
+				data: {
+					object: {
+						firstName: 'John',
+						lastName: 'Doe',
+						age: 30,
+					}
+				}
+			})
+		</script>
+		
+	</body>
+</html>

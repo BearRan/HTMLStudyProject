@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		
+		<div id="demo">
+			<p>type:"{{type}}"</p>
+			<template v-if="type === 'username'">
+				<label>Username</label>
+				<input placeholder="Enter your username" key="username-input">
+			</template>
+			<template v-else>
+				<label>Email</label>
+				<input placeholder="Enter your email address" key="email-input">
+			</template>
+			<br/>
+			<button v-on:click="changeUI">Toggle login type</button>
+			
+			<h1 v-show="true">
+				Hello
+			</h1>
+		</div>
+		
+		<script>
+			var vm = new Vue({
+				el: '#demo',
+				data: {
+					type: 'username'
+				},
+				methods: {
+					changeUI : function() {
+						if (this.type === 'username') {
+							this.type='email'
+						} else{
+							this.type='username'
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+</html>

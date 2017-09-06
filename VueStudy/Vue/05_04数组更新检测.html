@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		
+		<div id="demo">
+			<ol>
+				<li v-for="item in items">
+					{{item}}
+				</li>
+			</ol>
+		</div>
+		
+		<script>
+			var vm = new Vue({
+				el: '#demo',
+				data: {
+					items: [
+						{message: 'Foo'},
+						{message: 'Bar'},
+					]
+				}
+			})
+			vm.items.push({message: 'Baz'})
+			vm.items.reverse()
+			
+			//重塑数组
+			vm.items = vm.items.filter(function (item){
+				return item.message.match(/Foo/)
+			})
+		</script>
+		
+	</body>
+</html>

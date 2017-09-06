@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		
+		<div id="demo">
+			<h1 v-if='true1'>Yes</h1>
+			<h1 v-else>No</h1>
+			
+			<template v-if="true">
+				<h1>Title</h1>
+				<p>paragraph 1</p>
+				<p>paragraph 2</p>
+			</template>
+		</div>
+		
+		<div id="demo" v-if="true">
+			Now you see me
+		</div>
+		<div id="demo" v-else>
+			Now you don't
+		</div>
+		
+		<script>
+			var vm = new Vue({
+				el: '#demo',
+				data: {
+					
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		
+		<div id="demo">
+			<!--<ol>
+				<li v-for:(item in userProfile)>
+					{{item}}
+				</li>
+			</ol>-->
+			
+			{{userProfile}}
+		</div>
+		
+		<script>
+			var vm = new Vue({
+				el: '#demo',
+				data: {
+					userProfile: {
+						name: 'Anika'
+					}
+				}
+			})
+			
+			Vue.set(vm.userProfile, 'age', '27')
+//			this.$set(this.userProfile, 'className', 'A')
+
+			Object.assign(vm.userProfile, {
+							className: 'A',
+							favoriteColor: 'Vue Green'
+			})
+		</script>
+	</body>
+</html>
