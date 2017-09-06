@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		<div id="demo">
+			<button v-on:click="say('hi')">Say hi</button>
+			<button v-on:click="warn('hello')">Say hello</button>
+			<br/>
+			<button v-on:click="warn('From cannot be submitted yet.', $event)">Submit</button>
+		</div>
+		
+		<script>
+			new Vue({
+				el: '#demo',
+				methods: {
+					say: function (message) {
+						alert(message)
+					},
+					warn: function (message, event) {
+						//现在我们可以访问原生事件对象
+						if (event) {
+							event.preventDefault()
+						}
+						alert(message)
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
