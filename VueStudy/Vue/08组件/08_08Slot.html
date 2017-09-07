@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		
+		<div id="demo">
+			<h1>我是父组件的标题</h1>
+			<acomponent>
+				<p>test</p>
+			</acomponent>
+		</div>
+		
+		<script>
+			Vue.component('acomponent', {
+				template:'<div><h2>我是子组件的标题</h2><slot>只有在没有要分发的内容时才会显示。</slot></div>'
+			})
+			
+			new Vue({
+				el: '#demo',
+				data: {
+					parentMessage: '123'
+				}
+			})
+			
+			
+		</script>
+	</body>
+</html>

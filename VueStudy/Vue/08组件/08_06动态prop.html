@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		
+		<div id="demo">
+			<input v-model="parentMessage">
+			<br/>
+			<child v-bind:my-message="parentMessage"></child>
+		</div>
+		
+		<script>
+			Vue.component('child', {
+				props: ['myMessage'],
+				template:'<span>{{ myMessage }}</span>'
+			})
+			
+			new Vue({
+				el: '#demo',
+				data: {
+					parentMessage: '123'
+				}
+			})
+		</script>
+	</body>
+</html>

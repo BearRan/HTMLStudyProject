@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		
+		<div class="containter" id="demo">
+			dd
+		</div>
+		
+		Vue.component('layout', {
+			template: `<div>
+				<header>
+					<slot name="header"></slot>
+				</header>
+				<main>
+					<slot></slot>
+				</main>
+				<footer>
+					<slot name="footer"></slot>
+				</footer>
+			</div>`
+		})
+		
+		new Vue({
+				el: '#demo',
+				data: {
+					parentMessage: '123'
+				}
+			})
+	</body>
+</html>
