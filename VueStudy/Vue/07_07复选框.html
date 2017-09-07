@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		
+		<div id="demo">
+			<input
+				type="checkbox"
+				v-model="toogle"
+				v-bind:true-value="a"
+				v-bind:false-value="b"
+			>
+			<br/>
+			<p>toogle: {{toogle}}</p>
+		</div>
+		
+		<script>
+			new Vue({
+				el: '#demo',
+				data: {
+					toogle: '',
+					a: '',
+					b: ''
+				}
+			})
+			
+			vm.toogle === vm.a
+			//vm.toogle === vm.b
+		</script>
+	</body>
+</html>

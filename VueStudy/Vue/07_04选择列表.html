@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		<div id="demo">
+			
+			<!--单选列表-->
+			<select v-model='selected'>
+				<option disabled value="">请选择</option>
+				<option>A</option>
+				<option>B</option>
+				<option>C</option>
+			</select>	
+			<span>Selected: {{ selected }}</span>
+			
+			<br/>
+			<br/>
+			<select v-model="multipleSelected" multiple style="width: 50px">
+				<option>A</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+			<br/>
+			<span>Selected: {{ multipleSelected }}</span>
+		</div>
+		
+		<script>
+			new Vue({
+				el: '#demo',
+				data: {
+					selected: 'C',
+					multipleSelected: []
+				}
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://unpkg.com/vue"></script>
+	</head>
+	<body>
+		
+		<div id="demo">
+			
+			<!-- 当选中时，`picked` 为字符串 "a" -->
+			<input type="radio" v-model="picked" value="a">
+			<br/>
+			<p>picked:{{ picked }}</p>
+				
+			<!-- `toggle` 为 true 或 false -->
+			<br/>
+			<input type="checkbox" v-model="toggle">
+			<br/>
+			<p>toggle:{{ toggle }}</p>
+				
+			<!-- 当选中时，`selected` 为字符串 "abc" -->
+			<br/>
+			<select v-model="selected">
+				<option value="abc">ABC</option>
+			</select>
+			<br/>
+			<p>selected:{{selected}}</p>
+				
+		</div>
+			
+		<script>
+			new Vue({
+				el: '#demo',
+				data: {
+					picked: '',
+					toggle: '',
+					selected: ''
+				}
+			})
+		</script>
+			
+	</body>
+</html>
